@@ -13,10 +13,10 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'cratz'
-DESCRIPTION = 'My short description for my project.'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+DESCRIPTION = 'To compare 2 texts.'
+URL = 'https://github.com/ta9ya/cratz'
+EMAIL = 't.iwasa0821@gmail.com'
+AUTHOR = 'tiwa'
 REQUIRES_PYTHON = '>=3.6.0'
 VERSION = '0.1.0'
 
