@@ -31,15 +31,16 @@ class Cratz:
 		:return: bool
 		"""
 
-		if reverse:
+		if not reverse:
 			return self.first_word in self.second_word
 		else:
 			return self.second_word in self.first_word
 
-	def minimumEditDistance(self):
+	def levenshtein_distance(self):
 		"""
 
-		:return:
+		:return: int
+			distance
 		"""
 
 		s1 = self.first_word

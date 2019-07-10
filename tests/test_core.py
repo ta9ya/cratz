@@ -23,6 +23,17 @@ class TestCratz(unittest.TestCase):
 		first_word = '焼肉'
 		second_word = '焼肉定食が食べたい'
 
-		cratz_instance = Cratz(first_word, second_word,)
-
+		cratz_instance = Cratz(first_word, second_word)
 		self.assertTrue(cratz_instance.is_contained())
+
+		cratz_instance = Cratz(second_word, first_word)
+		self.assertFalse(cratz_instance.is_contained())
+
+	def test_levenshtein_distance(self):
+
+		first_word = '今日はいい天気だ'
+		second_word = '今日いい天気だ'
+
+		c = Cratz(first_word, second_word)
+		self.assertEqual(c.levenshtein_distance(), 1)
+
