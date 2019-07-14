@@ -37,3 +37,11 @@ class TestCratz(unittest.TestCase):
 		c = Cratz(first_word, second_word)
 		self.assertEqual(c.levenshtein_distance(), 1)
 
+	def test_norm_levenshtein_distance(self):
+
+		first_word = '今日はいい天気だよね'
+		second_word = '今日いい天気だよね'
+
+		c = Cratz(first_word, second_word)
+		self.assertEqual(c.levenshtein_distance(normalized=True), 0.1)
+

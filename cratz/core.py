@@ -36,11 +36,17 @@ class Cratz:
 		else:
 			return self.second_word in self.first_word
 
-	def levenshtein_distance(self):
+	def levenshtein_distance(self, normalized=False):
 		"""
+		calculate the levenshtein distance.
 
-		:return: int
-			distance
+		:param normalized : bool
+
+		:return : int
+			Case of normalized=False, the distance is returned as a int.
+		:return : float
+			Case of normalized=True, the distance is returned as a float.
+			(0 <= distance <= 1)
 		"""
 
 		s1 = self.first_word
@@ -64,4 +70,7 @@ class Cratz:
 					                             newDistances[-1])))
 			distances = newDistances
 
-		return distances[-1]
+		if normalized:
+			return distances[-1] / len(s2)
+		else:
+			return distances[-1]
